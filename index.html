@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1DA | Official Music Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home" class="logo">1DA <span>Official</span></a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#music">Music</a>
+            <a href="#tour">Shows</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-label">Music artist</p>
+            <h1>1DA <span>Official</span></h1>
+            <p class="hero-tagline">The <span>Tuva Kampala</span> EP — Coming Soon</p>
+            <a href="#music" class="btn">Preview Tracklist</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <p class="section-label">01. About</p>
+        <h2 class="section-title">Who I am</h2>
+        <div class="about-inner">
+            <p>1DA Official is a new artist bringing the <span class="accent">Tuva Kampala</span> EP to the world. Stay tuned for the first release and follow along for what comes next.</p>
+        </div>
+    </section>
+
+    <!-- Music: EP & Playlist Section -->
+    <section class="releases" id="music">
+        <p class="section-label">02. Music</p>
+        <h2 class="section-title">Upcoming <span>Release</span></h2>
+
+        <div class="featured-release">
+            <!-- Left: EP Artwork & Info -->
+            <div class="ep-artwork-container">
+                <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=800&auto=format&fit=crop" alt="Tuva Kampala EP Cover" class="ep-artwork">
+                <div class="ep-info">
+                    <h3>Tuva Kampala</h3>
+                    <p>Upcoming EP • Coming Soon</p>
+                    <a href="https://distrokid.com/hyperfollow/1da/tuva-kampala" class="btn" target="_blank" rel="noopener">Pre-Save Now</a>
+                    <div class="ep-platforms">
+                        <a href="https://open.spotify.com/artist/1da" target="_blank" rel="noopener">Spotify</a>
+                        <a href="https://music.apple.com/artist/1da" target="_blank" rel="noopener">Apple Music</a>
+                        <a href="https://soundcloud.com/1da" target="_blank" rel="noopener">SoundCloud</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Playlist / Tracklist -->
+            <div class="playlist-container">
+                <div class="playlist-header">
+                    <h4>Tracklist Previews</h4>
+                    <span>COMING SOON</span>
+                </div>
+
+                <div class="track">
+                    <span class="track-num">01</span>
+                    <span class="track-play-wrap"><span class="track-play-icon">▶</span><span class="track-pause-icon">⏸</span></span>
+                    <div class="track-title">Welcome to Kampala (Intro)</div>
+                    <span class="track-time">1:24</span>
+                </div>
+
+                <div class="track">
+                    <span class="track-num">02</span>
+                    <span class="track-play-wrap"><span class="track-play-icon">▶</span><span class="track-pause-icon">⏸</span></span>
+                    <div class="track-title">Tuva</div>
+                    <span class="track-time">3:41</span>
+                </div>
+
+                <div class="track">
+                    <span class="track-num">03</span>
+                    <span class="track-play-wrap"><span class="track-play-icon">▶</span><span class="track-pause-icon">⏸</span></span>
+                    <div class="track-title">City Rhythm</div>
+                    <span class="track-time">3:18</span>
+                </div>
+
+                <div class="track">
+                    <span class="track-num">04</span>
+                    <span class="track-play-wrap"><span class="track-play-icon">▶</span><span class="track-pause-icon">⏸</span></span>
+                    <div class="track-title">Midnight Drive</div>
+                    <span class="track-time">4:02</span>
+                </div>
+
+                <div class="track">
+                    <span class="track-num">05</span>
+                    <span class="track-play-wrap"><span class="track-play-icon">▶</span><span class="track-pause-icon">⏸</span></span>
+                    <div class="track-title">Fading Echoes (Outro)</div>
+                    <span class="track-time">2:55</span>
+                </div>
+
+                <a href="https://distrokid.com/hyperfollow/1da/tuva-kampala" class="btn btn--block" target="_blank" rel="noopener">Pre-Save Full EP</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shows Section -->
+    <section class="shows-section" id="tour">
+        <p class="section-label">03. Shows</p>
+        <h2 class="section-title">Live</h2>
+        <div class="shows-empty">
+            <p>No upcoming shows right now. Join the list below to be first to know when we announce dates.</p>
+            <a href="#contact" class="btn">Notify me</a>
+        </div>
+    </section>
+
+    <!-- Mailing List -->
+    <section class="newsletter">
+        <p class="section-label">04. Contact</p>
+        <h2 class="section-title">Stay <span>Updated</span></h2>
+        <div class="newsletter-inner">
+            <p>Get release news and early access. We'll tell you when we announce shows.</p>
+            <form id="newsletter-form" class="form-row" action="#" method="post">
+                <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+            <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="social-links">
+            <a href="https://open.spotify.com/artist/1da" target="_blank" rel="noopener">Spotify</a>
+            <a href="https://music.apple.com/artist/1da" target="_blank" rel="noopener">Apple Music</a>
+            <a href="https://instagram.com/1damusic" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://youtube.com/@1damusic" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <p class="footer-copy">&copy; 2025 1DA Official. Booking: mgmt@1damusic.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

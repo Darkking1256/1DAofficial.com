@@ -1,12 +1,11 @@
 /**
  * 1DA — Official Music Website
- * Nav, track “playing” state, mailing list form
+ * Nav, scroll reveals, track highlight + now-playing label, mailing list
  */
 
 (function () {
     'use strict';
 
-    // --- Mobile nav (hamburger) ---
     var navToggle = document.getElementById('nav-toggle');
     var navLinks = document.querySelector('.nav-links');
 
@@ -17,7 +16,6 @@
             document.body.style.overflow = open ? 'hidden' : '';
         });
 
-        // Close menu when a nav link is clicked (for anchor links)
         navLinks.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 navLinks.classList.remove('is-open');
@@ -27,8 +25,35 @@
         });
     }
 
-    // --- Track “playing” state (visual only) ---
+    // --- Scroll reveal ---
+    var revealEls = document.querySelectorAll('.reveal');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (revealEls.length && !reduceMotion) {
+        var observer = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { root: null, rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
+        );
+
+        revealEls.forEach(function (el) {
+            observer.observe(el);
+        });
+    } else if (revealEls.length) {
+        revealEls.forEach(function (el) {
+            el.classList.add('is-visible');
+        });
+    }
+
+    // --- Track row: visual “playing” + now playing bar ---
     var tracks = document.querySelectorAll('.track');
+    var nowPlayingEl = document.getElementById('now-playing-name');
 
     tracks.forEach(function (track) {
         track.addEventListener('click', function () {
@@ -38,11 +63,17 @@
             });
             if (!wasPlaying) {
                 track.classList.add('playing');
+                if (nowPlayingEl) {
+                    var title = track.getAttribute('data-track-title') || '';
+                    nowPlayingEl.textContent = title || 'Track selected';
+                }
+            } else if (nowPlayingEl) {
+                nowPlayingEl.textContent = 'Select a track below';
             }
         });
     });
 
-    // --- Mailing list form ---
+    // --- Mailing list ---
     var form = document.getElementById('newsletter-form');
     var messageEl = document.getElementById('form-message');
 
@@ -61,8 +92,7 @@
                 return;
             }
 
-            // No backend: show success (replace with real API call when ready)
-            messageEl.textContent = 'Thanks! We\'ll be in touch when the EP drops.';
+            messageEl.textContent = "Thanks! We'll be in touch when the EP drops.";
             messageEl.classList.add('success');
             input.value = '';
         });

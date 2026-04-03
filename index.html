@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1DA | Official Music Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,45 +19,116 @@
         </button>
         <div class="nav-links">
             <a href="#home">Home</a>
+            <a href="#spotlight">Spotlight</a>
             <a href="#about">About</a>
             <a href="#music">Music</a>
+            <a href="#scene">Scene</a>
             <a href="#tour">Shows</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <header class="hero" id="home">
-        <div class="hero-content">
-            <p class="hero-label">Music artist</p>
-            <h1>1DA <span>Official</span></h1>
-            <p class="hero-tagline">The <span>Tuva Kampala</span> EP — Coming Soon</p>
-            <a href="#music" class="btn">Preview Tracklist</a>
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-marquee" aria-hidden="true">
+            <div class="hero-marquee-inner">
+                <span>Tuva Kampala</span>
+                <span>·</span>
+                <span>Pre-save</span>
+                <span>·</span>
+                <span>New sound</span>
+                <span>·</span>
+                <span>Kampala energy</span>
+                <span>·</span>
+                <span>Tuva Kampala</span>
+                <span>·</span>
+                <span>Pre-save</span>
+                <span>·</span>
+                <span>New sound</span>
+                <span>·</span>
+                <span>Kampala energy</span>
+                <span>·</span>
+            </div>
         </div>
+        <div class="hero-content">
+            <div class="hero-chips">
+                <span class="chip">Now building</span>
+                <span class="chip chip--live">Art · Sound · Live</span>
+            </div>
+            <p class="hero-label">Official artist hub</p>
+            <h1>1DA <span>Official</span></h1>
+            <p class="hero-tagline">The <span>Tuva Kampala</span> EP — artwork, rhythm, and the city in every bar.</p>
+            <div class="hero-actions">
+                <a href="#music" class="btn">Listen &amp; pre-save</a>
+                <a href="#spotlight" class="btn btn--ghost">Explore the scene</a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint" aria-hidden="true">Scroll</div>
     </header>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <p class="section-label">01. About</p>
-        <h2 class="section-title">Who I am</h2>
-        <div class="about-inner">
-            <p>1DA Official is a new artist bringing the <span class="accent">Tuva Kampala</span> EP to the world. Stay tuned for the first release and follow along for what comes next.</p>
+    <!-- Spotlight: magazine-style lead -->
+    <section class="spotlight" id="spotlight">
+        <p class="section-label reveal">00. Spotlight</p>
+        <h2 class="section-title reveal">Cover story — <span>Tuva Kampala</span></h2>
+        <div class="spotlight-grid">
+            <article class="spotlight-feature reveal">
+                <div class="spotlight-feature-media">
+                    <img src="assets/tuva-kampala-ep-cover.jpg" alt="Tuva Kampala EP cover art" width="800" height="800">
+                    <span class="spotlight-badge">Featured release</span>
+                </div>
+                <div class="spotlight-feature-body">
+                    <h3>Visuals that carry the beat</h3>
+                    <p>Every track on the EP ties back to place and texture — street light, bass weight, and the story behind the art direction. This is the hub for drops, BTS, and the world around the music.</p>
+                    <a href="#music" class="text-link">Open the release hub →</a>
+                </div>
+            </article>
+            <div class="spotlight-side">
+                <article class="topic-card topic-card--accent reveal">
+                    <p class="topic-card-label">Interactive</p>
+                    <h3 class="topic-card-title">Build your queue</h3>
+                    <p class="topic-card-excerpt">Tap the tracklist to highlight what you are “playing” — a playful preview until the full stream goes live.</p>
+                    <a href="#music" class="text-link text-link--on-dark">Jump to tracklist →</a>
+                </article>
+                <article class="topic-card reveal">
+                    <p class="topic-card-label">Trending</p>
+                    <h3 class="topic-card-title">Pre-save wave</h3>
+                    <p class="topic-card-excerpt">Early supporters get first word on singles, visuals, and show announcements.</p>
+                    <a href="https://distrokid.com/hyperfollow/1da/tuva-kampala" class="text-link" target="_blank" rel="noopener">Pre-save on DistroKid →</a>
+                </article>
+            </div>
         </div>
     </section>
 
-    <!-- Music: EP & Playlist Section -->
+    <!-- About -->
+    <section class="about" id="about">
+        <p class="section-label reveal">01. About</p>
+        <h2 class="section-title reveal">Who I am</h2>
+        <div class="about-inner reveal">
+            <p>1DA Official is a new voice threading <span class="accent">Afro-fusion</span>, late-night city textures, and honest storytelling. <span class="accent">Tuva Kampala</span> is the first chapter — music you can see as well as hear.</p>
+        </div>
+    </section>
+
+    <!-- Music -->
     <section class="releases" id="music">
-        <p class="section-label">02. Music</p>
-        <h2 class="section-title">Upcoming <span>Release</span></h2>
+        <p class="section-label reveal">02. Music</p>
+        <h2 class="section-title reveal">Release hub — <span>play &amp; preview</span></h2>
+
+        <div class="now-playing-bar reveal" role="status" aria-live="polite">
+            <span class="now-playing-dot" aria-hidden="true"></span>
+            <span class="now-playing-label">Now highlighting</span>
+            <span class="now-playing-track" id="now-playing-name">Select a track below</span>
+        </div>
 
         <div class="featured-release">
-            <!-- Left: EP Artwork & Info -->
-            <div class="ep-artwork-container">
-                <img src="assets/tuva-kampala-ep-cover.png" alt="Tuva Kampala EP cover art" class="ep-artwork">
+            <div class="ep-artwork-container reveal">
+                <div class="ep-artwork-frame">
+                    <img src="assets/tuva-kampala-ep-cover.jpg" alt="Tuva Kampala EP cover art" class="ep-artwork" width="800" height="800">
+                </div>
                 <div class="ep-info">
                     <h3>Tuva Kampala</h3>
-                    <p>Upcoming EP • Coming Soon</p>
-                    <a href="https://distrokid.com/hyperfollow/1da/tuva-kampala" class="btn" target="_blank" rel="noopener">Pre-Save Now</a>
+                    <p>Upcoming EP · Coming soon</p>
+                    <a href="https://distrokid.com/hyperfollow/1da/tuva-kampala" class="btn" target="_blank" rel="noopener">Pre-save now</a>
                     <div class="ep-platforms">
                         <a href="https://open.spotify.com/artist/1da" target="_blank" rel="noopener">Spotify</a>
                         <a href="https://music.apple.com/artist/1da" target="_blank" rel="noopener">Apple Music</a>
@@ -66,69 +137,100 @@
                 </div>
             </div>
 
-            <!-- Right: Playlist / Tracklist -->
-            <div class="playlist-container">
+            <div class="playlist-container reveal">
                 <div class="playlist-header">
-                    <h4>Tracklist Previews</h4>
-                    <span>COMING SOON</span>
+                    <h4>Tracklist previews</h4>
+                    <span class="playlist-pill">Tap to play</span>
                 </div>
 
-                <div class="track">
+                <div class="track" data-track-title="Welcome to Kampala (Intro)">
                     <span class="track-num">01</span>
                     <span class="track-play-wrap"><span class="track-play-icon">▶</span><span class="track-pause-icon">⏸</span></span>
                     <div class="track-title">Welcome to Kampala (Intro)</div>
                     <span class="track-time">1:24</span>
                 </div>
 
-                <div class="track">
+                <div class="track" data-track-title="Tuva">
                     <span class="track-num">02</span>
                     <span class="track-play-wrap"><span class="track-play-icon">▶</span><span class="track-pause-icon">⏸</span></span>
                     <div class="track-title">Tuva</div>
                     <span class="track-time">3:41</span>
                 </div>
 
-                <div class="track">
+                <div class="track" data-track-title="City Rhythm">
                     <span class="track-num">03</span>
                     <span class="track-play-wrap"><span class="track-play-icon">▶</span><span class="track-pause-icon">⏸</span></span>
                     <div class="track-title">City Rhythm</div>
                     <span class="track-time">3:18</span>
                 </div>
 
-                <div class="track">
+                <div class="track" data-track-title="Midnight Drive">
                     <span class="track-num">04</span>
                     <span class="track-play-wrap"><span class="track-play-icon">▶</span><span class="track-pause-icon">⏸</span></span>
                     <div class="track-title">Midnight Drive</div>
                     <span class="track-time">4:02</span>
                 </div>
 
-                <div class="track">
+                <div class="track" data-track-title="Fading Echoes (Outro)">
                     <span class="track-num">05</span>
                     <span class="track-play-wrap"><span class="track-play-icon">▶</span><span class="track-pause-icon">⏸</span></span>
                     <div class="track-title">Fading Echoes (Outro)</div>
                     <span class="track-time">2:55</span>
                 </div>
 
-                <a href="https://distrokid.com/hyperfollow/1da/tuva-kampala" class="btn btn--block" target="_blank" rel="noopener">Pre-Save Full EP</a>
+                <a href="https://distrokid.com/hyperfollow/1da/tuva-kampala" class="btn btn--block" target="_blank" rel="noopener">Pre-save full EP</a>
             </div>
         </div>
     </section>
 
-    <!-- Shows Section -->
+    <!-- Scene: topical cards -->
+    <section class="scene" id="scene">
+        <p class="section-label reveal">03. The scene</p>
+        <h2 class="section-title reveal">Art, rhythm, <span>&amp; what is next</span></h2>
+        <div class="scene-grid">
+            <article class="scene-card reveal">
+                <div class="scene-card-icon" aria-hidden="true">◆</div>
+                <h3>Art &amp; visuals</h3>
+                <p>Cover art, color, and motion — the look of each drop is part of the song.</p>
+                <a href="#spotlight" class="scene-card-link">View spotlight</a>
+            </article>
+            <article class="scene-card reveal">
+                <div class="scene-card-icon" aria-hidden="true">♪</div>
+                <h3>On repeat</h3>
+                <p>Studio sketches, references, and the playlist DNA behind the EP.</p>
+                <a href="#music" class="scene-card-link">Open music hub</a>
+            </article>
+            <article class="scene-card reveal">
+                <div class="scene-card-icon" aria-hidden="true">◎</div>
+                <h3>Live energy</h3>
+                <p>Shows, pop-ups, and the room when the bass finally hits.</p>
+                <a href="#tour" class="scene-card-link">See dates</a>
+            </article>
+            <article class="scene-card reveal">
+                <div class="scene-card-icon" aria-hidden="true">✉</div>
+                <h3>Inner circle</h3>
+                <p>Email list for first listens, art reveals, and tour codes.</p>
+                <a href="#contact" class="scene-card-link">Subscribe</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Shows -->
     <section class="shows-section" id="tour">
-        <p class="section-label">03. Shows</p>
-        <h2 class="section-title">Live</h2>
-        <div class="shows-empty">
+        <p class="section-label reveal">04. Shows</p>
+        <h2 class="section-title reveal">Live</h2>
+        <div class="shows-empty reveal">
             <p>No upcoming shows right now. Join the list below to be first to know when we announce dates.</p>
             <a href="#contact" class="btn">Notify me</a>
         </div>
     </section>
 
-    <!-- Mailing List -->
-    <section class="newsletter">
-        <p class="section-label">04. Contact</p>
-        <h2 class="section-title">Stay <span>Updated</span></h2>
-        <div class="newsletter-inner">
-            <p>Get release news and early access. We'll tell you when we announce shows.</p>
+    <!-- Newsletter -->
+    <section class="newsletter" id="contact">
+        <p class="section-label reveal">05. Contact</p>
+        <h2 class="section-title reveal">Stay <span>updated</span></h2>
+        <div class="newsletter-inner reveal">
+            <p>Get release news, artwork drops, and early access. We will tell you when we announce shows.</p>
             <form id="newsletter-form" class="form-row" action="#" method="post">
                 <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
                 <button type="submit" class="btn">Subscribe</button>
@@ -138,14 +240,14 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="social-links">
             <a href="https://open.spotify.com/artist/1da" target="_blank" rel="noopener">Spotify</a>
             <a href="https://music.apple.com/artist/1da" target="_blank" rel="noopener">Apple Music</a>
             <a href="https://instagram.com/1damusic" target="_blank" rel="noopener">Instagram</a>
             <a href="https://youtube.com/@1damusic" target="_blank" rel="noopener">YouTube</a>
         </div>
-        <p class="footer-copy">&copy; 2025 1DA Official. Booking: mgmt@1damusic.com</p>
+        <p class="footer-copy">&copy; 2026 1DA Official. Booking: mgmt@1damusic.com</p>
     </footer>
 
     <script src="script.js"></script>

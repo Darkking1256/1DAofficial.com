@@ -29,7 +29,9 @@
     var revealEls = document.querySelectorAll('.reveal');
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (revealEls.length && !reduceMotion) {
+    var hasIO = typeof IntersectionObserver !== 'undefined';
+
+    if (revealEls.length && !reduceMotion && hasIO) {
         var observer = new IntersectionObserver(
             function (entries) {
                 entries.forEach(function (entry) {
